@@ -1,18 +1,13 @@
 let myarray = [];
-let sum = 0
 
-do {
-    let numero = prompt("inserisci un numero");
-    myarray.push(numero);
+while (myarray.length < 10) {
+  let random = Math.floor(Math.random()*100)+1;
 
-    let sum = myarray.reduce(myFunc);
-
-    function myFunc(total, num) {
-        return total += num;
-      }
-    console.log(sum);
-    
-} while (myarray.length < 3);
+  if (!myarray.includes(random)) {
+    myarray.push(random);
+  }
+}
+console.log(myarray);
 
 
 
